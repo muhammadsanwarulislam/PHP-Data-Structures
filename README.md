@@ -1,7 +1,7 @@
 | #  |                                                           Topics                                                            |
 | ----- | :-------------------------------------------------------------------------------------------------------------------------: |
 | 00    | [Introduction](#introduction)<br>[Requirements](#requirements)<br>
-| 01    |                      [JavaScript Refresher](./01_Day_JavaScript_Refresher/01_javascript_refresher.md)                       |
+| 01    |                      [Array](./01_Array/01_array.md)                       |
 
 
 
