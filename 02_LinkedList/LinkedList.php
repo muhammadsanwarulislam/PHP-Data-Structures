@@ -116,6 +116,21 @@ class LinkedList
             $currentNode    = $currentNode->next;
         }
     }
+
+    public function getNthNode(int $n = 0)
+    {
+        $count = 1;
+        if($this->__firstNode !== NULL) {
+            $currentNode = $this->__firstNode;
+            while($currentNode !== NULL) {
+                if($count === $n) {
+                    return $currentNode;
+                }
+                $count++;
+                $currentNode = $currentNode->next;
+            }
+        }
+    }
 }
 
 $programmingBooks = new LinkedList();
@@ -130,6 +145,8 @@ $programmingBooks->insertBefore("Python programming language", "MySQL Workbench 
 
 $programmingBooks->insertAfter("ABD programming language", "Mastering JavaScript");
 $programmingBooks->display();
+
+echo "2nd Item is: ".$programmingBooks->getNthNode(2)->data;
 
 // $programmingBooks = new LinkedList();
 // $programmingBooks->insertAtFirst("Introduction to PHP7");
