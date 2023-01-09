@@ -54,7 +54,28 @@ class LinkedList
         }
     }
 
-    public function search(string $data) {
+    public function insertBefore(string $data = NULL, string $query = NULL)
+    {
+        $newNode = new NodeList($data);
+        if($this->__firstNode){
+            $previousNode = NULL;
+            $currentNode  = $this->__firstNode;
+            while($currentNode !== NULL) {
+                // print_r($query);
+                if($currentNode->data === $query) {
+                    $newNode->next = $currentNode;
+                    $previousNode->next = $newNode;
+                    $this->__totalNodes++;
+                    break;
+                }
+                $previousNode = $currentNode;
+                $currentNode = $currentNode->next;
+            }
+        }
+    }
+
+    public function search(string $data)
+    {
         $currentNode = $this->__firstNode;
         while($currentNode != NULL) {
             if($currentNode->data === $data) {
@@ -81,9 +102,12 @@ $programmingBooks = new LinkedList();
 $programmingBooks->insertAtLast("Introduction to PHP7");
 $programmingBooks->insertAtLast("Mastering JavaScript");
 $programmingBooks->insertAtLast("MySQL Workbench tutorial");
-$programmingBooks->search("Introduction to PHP7");
-$programmingBooks->display();
+// $programmingBooks->search("Introduction to PHP7");
+// $programmingBooks->display();
 
+
+$programmingBooks->insertBefore("Python programming language", "MySQL Workbench tutorial");
+$programmingBooks->display();
 
 // $programmingBooks = new LinkedList();
 // $programmingBooks->insertAtFirst("Introduction to PHP7");
