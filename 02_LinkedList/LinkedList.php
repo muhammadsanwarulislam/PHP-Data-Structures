@@ -57,7 +57,6 @@ class LinkedList
     public function insertBefore(string $data = NULL, string $query = NULL)
     {
         $newNode = new NodeList($data);
-
         if($this->__firstNode){
             $previousNode = NULL;
             $currentNode  = $this->__firstNode;
@@ -129,7 +128,7 @@ $programmingBooks->insertAtLast("MySQL Workbench tutorial");
 
 $programmingBooks->insertBefore("Python programming language", "MySQL Workbench tutorial");
 
-$programmingBooks->insertBefore("ABD programming language", "Mastering JavaScript");
+$programmingBooks->insertAfter("ABD programming language", "Mastering JavaScript");
 $programmingBooks->display();
 
 // $programmingBooks = new LinkedList();
