@@ -8,7 +8,7 @@
 
 ## Introduction
 
-**Hello,** This repository is for those who want to learn data structures and algorithms with PHP for better control over application-solution, efficiency, and optimization.A basic understanding of PHP data types, control structures, and other basic features is required.
+**Hello,** This repository will help you to learn data structures and algorithms using PHP. It will help you to manage your application with an efficient and optimized way.
 
 ## Different  data structures
 There are two different groups of data structures
