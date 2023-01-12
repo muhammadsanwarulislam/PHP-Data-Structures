@@ -1,5 +1,10 @@
 <?php
-
+/* 
+ * Example code for: Queue
+ * 
+ * Author: Muhammad Sanwarul Islam <muhammad.sanwarul94@gmail.com>
+ * 
+ */
 interface Queue {
     public function enqueue(string $item);
 
