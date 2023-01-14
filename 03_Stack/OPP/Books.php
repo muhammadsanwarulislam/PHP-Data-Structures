@@ -1,48 +1,43 @@
 <?php
 require_once '../OPP/stackInterface.php';
-
+require_once '../OPP/linkedList.php';
 class Books implements Stack {
-    private $limit;
     private $stack;
 
-    public function __construct(int $limit)
+    public function __construct()
     {
-        $this->limit = $limit;
-        $this->stack = [];
+        $this->stack = new LinkedList();
     }
 
     public function push(string $item)
     {
-        if(count($this->stack) < $this->limit) {
-            array_push($this->stack, $item);
-        }else {
-            throw new OverflowException('Stack is full');
-        }
+        $this->stack->insert($item);
     }
 
-    public function pop()
+    public function pop():string
     {
-        if($this->isEmpty()) {
+        if ($this->isEmpty()) {
             throw new UnderflowException('Stack is empty');
-        }else {
-            return array_pop($this->stack);
+        } else {
+            $lastItem = $this->top();
+            $this->stack->deleteLast();
+            return $lastItem;
         }
     }
 
     public function top():string
     {
-        return end($this->stack);
+        return $this->stack->getNthNode($this->stack->getSize())->data;
     }
 
     public function isEmpty():bool
     {
-        return empty($this->stack);
+        return $this->stack->getSize() == 0;
     }
 
-    public function display()
+    public function showStack()
     {
-        foreach($this->stack as $s) {
-            echo $s."\n";
-        }
+        print_r($this->stack);
+        $this->stack->display();
     }
 }

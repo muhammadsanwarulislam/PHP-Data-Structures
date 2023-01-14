@@ -8,4 +8,6 @@ interface Stack {
     public function isEmpty();
 
     public function top();
+
+    public function showStack();
 }
