@@ -73,3 +73,49 @@ RollNumber: 71
 Contact: muhammad@gmail.com 
 ```
 Here we are using each key to hold one piece of data. We can add as many keys as we need without any problem. This gives us the flexibility to represent a data structure similar to structure, map, and dictionary using a PHP associative array.
+
+***Multidimensional array***
+A multidimensional array contains multiple arrays in it. In other words, it is an array of array(s). In this book, we will be using multidimensional arrays in different examples as they are one of the most popular and efficient ways of storing data for graphs and other tree-type data structures. Let us explore the PHP multidimensional array using an example:
+
+```
+$players = [];
+$players[] = ["Name" => "Ronaldo", "Age" => 31, "Country" => "Portugal", "Team"
+=> "Real Madrid"];
+$players[] = ["Name" => "Messi", "Age" => 27, "Country" => "Argentina", "Team" =>
+"Barcelona"];
+$players[] = ["Name" => "Neymar", "Age" => 24, "Country" => "Brazil", "Team" =>
+"Barcelona"];
+$players[] = ["Name" => "Rooney", "Age" => 30, "Country" => "England", "Team" =>
+"Man United"];
+foreach($players as $index => $playerInfo) { 
+ echo "Info of player # ".($index+1)."\n";
+ foreach($playerInfo as $key => $value) { 
+ echo $key.": ".$value."\n";
+ } 
+ echo "\n";
+}
+```
+The example we just saw is an example of a two-dimensional array. As a result, we are using two foreach loops to iterate the two-dimensional array.
+Here is the output of the code:
+```
+Info of player # 1 
+Name: Ronaldo 
+Age: 31 
+Country: Portugal 
+Team: Real Madrid 
+Info of player # 2 
+Name: Messi 
+Age: 27 
+Country: Argentina 
+Team: Barcelona 
+Info of player # 3 
+Name: Neymar 
+Age: 24 
+Country: Brazil 
+Team: Barcelona 
+Info of player # 4 
+Name: Rooney 
+Age: 30 
+Country: England 
+Team: Man United
+```
