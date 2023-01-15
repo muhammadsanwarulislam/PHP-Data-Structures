@@ -51,4 +51,25 @@ Position 500 holds the value 1000
 Position 1001 holds the value 10000 
 Position 71 holds the value 1971
 ```
-
+***Associative array***
+An associative array is accessed by a key which can be any string. In an associative array, values are stored against the key instead of a linear index. We can use an associative array to store any type of data, just like the numeric array. Let us create a student array where we will store student information:
+```
+$studentInfo = []; 
+$studentInfo['Name'] = "muhammad"; 
+$studentInfo['Age'] = 11; 
+$studentInfo['Class'] = 6; 
+$studentInfo['RollNumber'] = 71; 
+$studentInfo['Contact'] = "muhammad@gmail.com"; 
+foreach($studentInfo as $key => $value) { 
+ echo $key.": ".$value."\n"; 
+}
+```
+Here is the output of the code:
+```
+Name: muhammad 
+Age: 11 
+Class: 6 
+RollNumber: 71 
+Contact: muhammad@gmail.com 
+```
+Here we are using each key to hold one piece of data. We can add as many keys as we need without any problem. This gives us the flexibility to represent a data structure similar to structure, map, and dictionary using a PHP associative array.
