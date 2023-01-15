@@ -8,7 +8,7 @@ If we want to categorize the array, then there are mainly three types of arrays:
 * Associative array
 * Multidimensional array
 
-**Numeric array**
+## Numeric array
 A numeric array does not mean it only holds numeric data.In fact, it means the indexs will be numbers only. In numeric arrays, values are store and accessed in a linear way. In PHP numeric array they can be sequential or non-sequential but they have to be numeric. Here some examples of PHP numeric array:
 
 ```
@@ -51,7 +51,7 @@ Position 500 holds the value 1000
 Position 1001 holds the value 10000 
 Position 71 holds the value 1971
 ```
-***Associative array***
+## Associative array
 An associative array is accessed by a key which can be any string. In an associative array, values are stored against the key instead of a linear index. We can use an associative array to store any type of data, just like the numeric array. Let us create a student array where we will store student information:
 ```
 $studentInfo = []; 
@@ -74,7 +74,7 @@ Contact: muhammad@gmail.com
 ```
 Here we are using each key to hold one piece of data. We can add as many keys as we need without any problem. This gives us the flexibility to represent a data structure similar to structure, map, and dictionary using a PHP associative array.
 
-***Multidimensional array***
+## Multidimensional array
 A multidimensional array contains multiple arrays in it. In other words, it is an array of array(s). In this book, we will be using multidimensional arrays in different examples as they are one of the most popular and efficient ways of storing data for graphs and other tree-type data structures. Let us explore the PHP multidimensional array using an example:
 
 ```
