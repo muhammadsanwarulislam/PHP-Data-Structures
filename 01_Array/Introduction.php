@@ -1,28 +1,28 @@
 <?php
-function findPlayer(Array $players, string $expectedPlayer) {
-   
+
+function findABook(Array $bookList, string $bookName) {
     $found = FALSE;
-    foreach($players as $key => $player) {
-        if($player === $expectedPlayer) {
-            $found = $key;
-            break;
+    
+    foreach($bookList as $index => $book) {
+        if($book === $bookName) {
+             $found = $index;
+             break;
         }
     }
-    return $found;
+    return $found;        
 }
 
-function placeAllPlayers(Array $expectedPlayers, Array &$players) {
-
-    foreach($expectedPlayers as $expectedPlayer) {
-        $foundPlayer = findPlayer($players, $expectedPlayer);
-
-        if($foundPlayer !== FALSE) {
-            array_slice($players, $foundPlayer, 1);
+function placeAllBooks(Array $orderedBooks, Array &$bookList) {
+    foreach ($orderedBooks as $book) {
+        $bookFound = findABook($bookList, $book);
+        if($bookFound !== FALSE) {
+            array_splice($bookList, $bookFound, 1);
         }
-    }
+  }
 }
 
-$players = ['Messi', 'Ronaldo','Ronaldinho','Neymar','Kylian Mbappé'];
-$expectedPlayers = ['Neymar','Ronaldo','Messi'];
-placeAllPlayers($expectedPlayers,$players);
-echo implode(",", $players);
+$bookList = ['PHP','MySQL','PGSQL','Oracle','Java'];
+$orderedBooks = ['MySQL','PGSQL','Java'];
+
+placeAllBooks($orderedBooks, $bookList);
+echo implode(",", $bookList);
