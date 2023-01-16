@@ -13,4 +13,13 @@ In this example, the linked list contains 4 nodes, each storing an integer value
 
 We can also perform a wide variety of operations on a linked list, such as
 the following ones:
-Checking whether the list is empty
+  * Checking whether the list is empty
+  * Displaying all items in the list
+  * Searching an item in the list
+  * Getting the size of the list
+  * Inserting a new item at the beginning or end of the list
+  * Removing an item from the beginning or end of the list
+  * nserting a new item at a specific place or before/after an item
+  * Reversing a list
+  These are only some of the operations that can be performed on a linked list.
+
