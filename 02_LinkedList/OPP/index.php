@@ -3,15 +3,20 @@
 require_once '../OPP/PracticeWithLinkedList.php';
 
 $nodeObject = (new LinkedList())
-                ->inserAtFirst('Introduction to PHP7')
-                ->inserAtFirst('Mastering JavaScript')
+                // ->inserAtFirst('Introduction to PHP7')
+                // ->inserAtFirst('Mastering JavaScript')
+                // ->inserAtFirst('2')
+                // ->inserAtFirst('0')
+                // ->inserAtFirst('3')
 
                 ->insertAtLast('MySQL Workbench tutorial')
                 ->insertAtLast('Computer Fundamentals')
                 ->insertAtLast('PHP OPP')
                 ->insertAtLast('Database Management')
 
-                ->insertBefore('Working','PHP OPP')
+                ->reverse()
+
+                // ->insertBefore('Working','PHP OPP')
                 ->display();
 
 // $obj = new LinkedList();

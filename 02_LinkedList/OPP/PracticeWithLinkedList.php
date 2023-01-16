@@ -1,5 +1,6 @@
 <?php
 require_once '../OPP/Node.php';
+
 class LinkedList {
     Private $_firstNode = NULL;
     private $_totalNodes     = 0;
@@ -53,6 +54,26 @@ class LinkedList {
                 }
                 $previousNode = $currentNode;
                 $currentNode = $currentNode->next;
+            }
+        }
+        return $this;
+    }
+
+    public function reverse(): LinkedList
+    {
+        if ($this->_firstNode !== NULL) {
+            if ($this->_firstNode->next !== NULL) {
+                $reversedList = NULL;
+                $next = NULL;
+                $currentNode = $this->_firstNode;
+
+                while ($currentNode !== NULL) {
+                    $next = $currentNode->next;
+                    $currentNode->next = $reversedList;
+                    $reversedList = $currentNode;
+                    $currentNode = $next;
+                }
+                $this->_firstNode = $reversedList;
             }
         }
         return $this;
