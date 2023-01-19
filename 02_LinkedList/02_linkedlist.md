@@ -22,4 +22,20 @@ the following ones:
   * nserting a new item at a specific place or before/after an item
   * Reversing a list
   These are only some of the operations that can be performed on a linked list.
+  
+  ## Different types of linked list
+  There are several types of linked lists, including:
+  * Singly linked list: A linked list in which each node points to the next node in the list.
+  * Doubly linked list: A linked list in which each node points to the next node and the previous node in the list.
+  * Circular linked list: A linked list in which the last node points to the first node, creating a loop.
+  * Multiply linked list: A linked list in which each node can have multiple links, rather than just one.
+## Let's explore some available linked list operation
+ * Inserting at the first node.
+ * Searching for a node.
+ * Inserting before a specific node.
+ * Inserting after a specific node.
+ * Deleting the first node.
+ * Deleting the last node.
+ * Getting Nth position element.
+ * Reverseing a linked ist.
 
