@@ -2,9 +2,11 @@
 
 require_once '../OPP/node.php';
 
-class LinkedList {
-    private $_firstNode = NULL;
-    private $_totalNode = 0;
+class LinkedList implements Iterator{
+    private $_firstNode     =   NULL;
+    private $_totalNode     =   0;
+    private $_currentNode   =   NUll;
+    private $currentPosition=   0;
 
     public function insert($data)
     {
@@ -50,6 +52,37 @@ class LinkedList {
                 $currentNode = $currentNode->next;
             }
         }
+    }
+
+    public function getSize()
+    {
+        return $this->_totalNode;
+    }
+
+    public function current(): mixed
+    {
+        return $this->_currentNode->data;
+    }
+
+    public function next(): void
+    {
+        $this->_currentPosition++;
+        $this->_currentNode = $this->_currentNode->next;
+    }
+
+    public function key(): mixed
+    {
+        return $this->_currentPosition;
+    }
+
+    public function rewind(): void
+    {
+        $this->_currentPosition = 0;
+        $this->_currentNode = $this->_firstNode;
+    }
+    public function valid(): bool
+    {
+        return $this->_currentNode !== NULL;
     }
 
     public function display() 

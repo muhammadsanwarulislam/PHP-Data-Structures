@@ -1,5 +1,6 @@
 <?php
 require_once '../OPP/queueInterface.php';
+require_once '../OPP/linkedList.php';
 
 class TicketQueue implements Queue {
     private $limit;
@@ -8,13 +9,13 @@ class TicketQueue implements Queue {
     public function __construct($limit)
     {
         $this->limit = $limit;
-        $this->queue = [];
+        $this->queue = new LinkedList();
     }
 
     public function enqueue(string $item)
     {
-        if(count($this->queue) < $this->limit) {
-            array_push($this->queue, $item);
+        if($this->queue->getSize() < $this->limit) {
+            $this->queue->insert($item);
         }else {
             throw new OverflowException('Queue full');
         }
@@ -25,25 +26,23 @@ class TicketQueue implements Queue {
         if($this->isEmpty()) {
             throw new UnderflowException('Queue is Empty');
         }else {
-            array_shift($this->queue);
+            $this->queue->deleteFirst();
         }
     }
 
     public function peek(): string
     {
-        return current($this->queue);
+        return $this->queue->getNthNode(1)->data;
     }
 
     public function isEmpty(): bool
     {
-        return empty($this->queue);
+        return $this->queue->getSize() == 0;
     }
 
     public function show()
     {
-        foreach($this->queue as $queue)
-        {
-            echo $queue."\n";
-        }
+        return $this->queue->display();
     }
+
 }
