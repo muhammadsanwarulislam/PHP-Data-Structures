@@ -59,6 +59,20 @@ class LinkedList {
         return $this;
     }
 
+    public function deleteFirst()
+    {
+        if($this->_firstNode !== NULL) {
+            if($this->_firstNode->next !==NULL) {
+                $this->_firstNode = $this->_firstNode->next;
+            }else{
+                $this->_firstNode = NULL;
+            }
+            $this->_totalNodes--;
+            return TRUE;
+        }
+        return FALSE;
+    }
+
     public function reverse(): LinkedList
     {
         if ($this->_firstNode !== NULL) {
