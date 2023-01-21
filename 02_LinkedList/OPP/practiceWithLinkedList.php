@@ -73,6 +73,40 @@ class LinkedList {
         return FALSE;
     }
 
+    public function deleteLast()
+    {
+        if($this->_firstNode !== NULL) {
+            $currentNode = $this->_firstNode;
+            if($currentNode === NULL) {
+                $this->_firstNode = NULL;
+            }else {
+                $previousNode = NULL;
+                while($currentNode->next !== NULL) {
+                    $previousNode = $currentNode;
+                    $currentNode = $currentNode->next;
+                }
+                $previousNode->next = NULL;
+                $this->_totalNodes--;
+                return TRUE;
+            }
+        }
+        return FALSE;
+    }
+
+    public function search(string $data)
+    {
+        if($this->_totalNodes) {
+            $currentNode = $this->_firstNode;
+            while($currentNode !== NULL) {
+                if($currentNode->data === $data) {
+                    return $currentNode;
+                }
+                $currentNode = $currentNode->next;
+            }
+        }
+        return FALSE;
+    }
+
     public function reverse(): LinkedList
     {
         if ($this->_firstNode !== NULL) {
