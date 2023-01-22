@@ -107,3 +107,4 @@ The insert method takes one argument, which is the data itself. We will create a
       $this->__firstNode = &$newNode;
   }
  ```
+We can see from the preceding code segment that we are creating a new node with the data and naming the node object ```$newNode```. After that, it checks whether ```$_firstNode``` is ```NULL``` or not. If it is ```NULL```, then the list is empty. If it is empty, then we assign the ```$newNode``` object to the ```$_firstNode ```property. Now, the remaining part of the ```insert``` method represents our second condition, which is that the list is not empty, and we have to add the new item at the end of the list:
