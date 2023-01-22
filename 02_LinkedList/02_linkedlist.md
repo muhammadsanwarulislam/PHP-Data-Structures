@@ -121,3 +121,21 @@ return TRUE;
 ```
 Here, we get the first node of the list from the ```$_firstNode``` property. Now, we are going to iterate from the first node until the end of the list. We will ensure this by checking the condition that the next link for the current node is not NULL. If it is NULL, then we have reached the end of the list. In order to make sure that we are not looping to the same node all the time, we set the next node on from the current node as the current item during the iteration process. The while loop code implements the logic. Once we get out of the while loop, we set the last node of the linked list as ```$currentNode```. Now, we have to assign the next link of the current last node to the newly created node named ```$newNode```, so we simply put the object to the next link of the node. This object reference will work as a link between two node objects. At the end, we also increment the total node count value by 1 by post incrementing the ```$_totalNode``` property.
 
+If we look at our display method, we can see that we are using almost similar logic to iterate through each of the nodes and displaying its content. We first get the head item for the linked list. Then, we iterate through the list until the list item is NULL. Inside the loop, we display the node data by showing its $data property. Now, we have a node class ListNode to create individual nodes for the linked list, and we have the LinkedList class to do basic insert and display operations. Let's write a small code to utilize the LinkedList class to create a linked list for book titles:
+
+```
+$programmingBooks = new LinkedList();
+$programmingBooks->insert("Introduction to PHP7");
+$programmingBooks->insert("Mastering JavaScript");
+$programmingBooks->insert("MySQL Workbench tutorial");
+$programmingBooks->display();
+```
+Here, we create a new object for LinkedList and name it ```$programmingBooks```. Then, we insert new book items using the ```insert``` method. We add three books, and
+then, we are displaying the book names using the ```display``` method. If we run the preceding code, we will see following output:
+
+```
+Total book titles: 3
+Introduction to PHP7
+Mastering JavaScript
+MySQL Workbench tutorial
+```
