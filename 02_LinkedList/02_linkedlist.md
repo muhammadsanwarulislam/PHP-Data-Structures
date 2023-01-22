@@ -38,4 +38,52 @@ the following ones:
  * Deleting the last node.
  * Getting Nth position element.
  * Reverseing a linked ist.
+ 
+ Let's demonstrate a simple code that store some name using linked list:
+ ```
+ class NodeList 
+{
+    public $data    = NULL;
+    public $next    = NULL;
+
+    public function __construct(string $data = NULL)
+    {
+        $this->data = $data;
+    }
+}
+ ```
+ As we mentioned a linked list consists of nodes. We have created a class for our node. The ```NodeList``` class has two properties: one that will store the data and the other will call next node using ```next``` property. Now let's implement a linked list using ```NodeList``` class. For simplicity, we will just have two operations: ```insert``` and ```display```.
+ 
+ ```
+ class LinkedList
+{
+    private $__firstNode    = NULL;
+    private $__totalNodes   = 0;
+
+    public function insert(string $data  = NULL)
+    {
+        $newNode    = new NodeList($data);
+
+        if($this->__firstNode === NULL){
+            $this->__firstNode = &$newNode;
+        }else{
+           $currentNode = $this->__firstNode;
+           $this->__firstNode = &$newNode;
+           $newNode->next = $currentNode; 
+        }
+    }
+
+    public function display()
+    {
+        echo "Total book titles: ".$this->__totalNodes."\n";
+        $currentNode    = $this->__firstNode;
+        while($currentNode  !==NULL)
+        {
+            echo $currentNode->data ."\n";
+            $currentNode    = $currentNode->next;
+        }
+    }
+}
+ ```
+ 
 
