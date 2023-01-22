@@ -108,3 +108,16 @@ The insert method takes one argument, which is the data itself. We will create a
   }
  ```
 We can see from the preceding code segment that we are creating a new node with the data and naming the node object ```$newNode```. After that, it checks whether ```$_firstNode``` is ```NULL``` or not. If it is ```NULL```, then the list is empty. If it is empty, then we assign the ```$newNode``` object to the ```$_firstNode ```property. Now, the remaining part of the ```insert``` method represents our second condition, which is that the list is not empty, and we have to add the new item at the end of the list:
+
+```
+$currentNode = $this->__firstNode;     
+while($currentNode->next !== NULL){
+ $currentNode = $currentNode->next;
+}
+
+$currentNode->next   = $newNode;
+$this->__totalNodes++;
+return TRUE; 
+```
+Here, we get the first node of the list from the ```$_firstNode``` property. Now, we are going to iterate from the first node until the end of the list. We will ensure this by checking the condition that the next link for the current node is not NULL. If it is NULL, then we have reached the end of the list. In order to make sure that we are not looping to the same node all the time, we set the next node on from the current node as the current item during the iteration process. The while loop code implements the logic. Once we get out of the while loop, we set the last node of the linked list as ```$currentNode```. Now, we have to assign the next link of the current last node to the newly created node named ```$newNode```, so we simply put the object to the next link of the node. This object reference will work as a link between two node objects. At the end, we also increment the total node count value by 1 by post incrementing the ```$_totalNode``` property.
+
