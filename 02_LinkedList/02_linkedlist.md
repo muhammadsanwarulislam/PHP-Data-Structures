@@ -65,18 +65,24 @@ the following ones:
         $newNode    = new NodeList($data);
 
         if($this->__firstNode === NULL){
-            $this->__firstNode = &$newNode;
+            $this->__firstNode  = &$newNode;
         }else{
            $currentNode = $this->__firstNode;
-           $this->__firstNode = &$newNode;
-           $newNode->next = $currentNode; 
+           
+           while($currentNode->next !== NULL){
+            $currentNode = $currentNode->next;
+           }
+           
+           $currentNode->next   = $newNode;
+           $this->__totalNodes++;
+           return TRUE; 
         }
     }
 
     public function display()
     {
-        echo "Total book titles: ".$this->__totalNodes."\n";
-        $currentNode    = $this->__firstNode;
+        echo "Total book titles: ".$this->_totalNodes."\n";
+        $currentNode    = $this->_firstNode;
         while($currentNode  !==NULL)
         {
             echo $currentNode->data ."\n";
@@ -85,5 +91,19 @@ the following ones:
     }
 }
  ```
- 
+The following implementation as we define our two basic operations for insert and display nodes. In the LinkedList class, we have two private properties: ```$_firstNode``` and ```$_totalNodes```. Both have the default value of ```NULL``` and ```0```, respectively. We need to mark the head node or first node, so that we always know where we have to start from. We can also call it the front node. Whatever name we provide, it will be mainly used to indicate the start of the linked list. Now, let's move to the insert operation code.
 
+The insert method takes one argument, which is the data itself. We will create a new node with the data using the ```ListNode``` class. Before inserting a book title in our linked list, we have to consider two possibilities:
+  * The list is empty and we are inserting the first title
+  * The list is not empty and the title is going to be added at the end
+ 
+ Why do we need to consider both cases? The answer is pretty simple. If we do not know whether the list is empty or not, we might get different results for our operations. We might also create invalid linking between the nodes. So, the idea is if the list is empty, our insert item is going to be the first item of the list. This is what the first part of the code is doing:
+ 
+ ```
+ $newNode    = new NodeList($data);
+
+  if($this->__firstNode === NULL)
+  {
+      $this->__firstNode = &$newNode;
+  }
+ ```
