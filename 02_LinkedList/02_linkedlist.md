@@ -139,3 +139,24 @@ Introduction to PHP7
 Mastering JavaScript
 MySQL Workbench tutorial
 ```
+### Inserting at the first node ###
+To insert a new node at the front of a singly linked list, you can follow these steps:
+   * Create a new node with the desired data.
+   * Set the next pointer of the new node to point to the current head of the list.
+   * Update the head of the list to point to the new node.
+
+Here is the example:
+```
+public function insertAtFirst(string $data  = NULL)
+ {
+     $newNode    = new NodeList($data);
+
+     if($this->_firstNode === NULL){
+         $this->_firstNode = &$newNode;
+     }else{
+        $currentNode = $this->_firstNode;
+        $this->_firstNode = &$newNode;
+        $newNode->next = $currentNode; 
+     }
+ }
+```
