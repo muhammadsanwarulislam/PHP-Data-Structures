@@ -22,6 +22,7 @@ $obj->inserAtFirst('working 2');
 $obj->inserAtFirst('working 3');
 // $obj->deleteLast();
 // $obj->deleteFirst();
+// $obj->delete('working 1');
 $obj->search('working 2');
-// $obj->display();
+$obj->display();
 // echo "2nd Item is: ".$obj->getNthNode(1)->data;
