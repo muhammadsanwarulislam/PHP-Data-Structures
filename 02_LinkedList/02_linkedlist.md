@@ -145,7 +145,7 @@ To insert a new node at the front of a singly linked list, you can follow these 
    * Set the next pointer of the new node to point to the current head of the list.
    * Update the head of the list to point to the new node.
 
-Here is the example:
+Here is the code:
 ```
 public function insertAtFirst(string $data  = NULL)
  {
@@ -158,5 +158,22 @@ public function insertAtFirst(string $data  = NULL)
         $this->_firstNode = &$newNode;
         $newNode->next = $currentNode; 
      }
+ }
+```
+### Searching for node ###
+Searching for a node in a linked list typically involves iterating through the list, starting at the head, and comparing the value of each node to the target value. If the value is found, the node can be returned or its position in the list can be returned. If the value is not found, the search can return null or a specific value indicating that the node was not found.
+
+Here is the code:
+```
+public function search(string $data)
+ {
+     $currentNode = $this->_firstNode;
+     while($currentNode != NULL) {
+         if($currentNode->data === $data) {
+             return $currentNode;
+         }
+         $currentNode = $currentNode->next;
+     }
+     return FALSE;
  }
 ```
