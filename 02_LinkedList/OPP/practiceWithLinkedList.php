@@ -93,6 +93,28 @@ class LinkedList {
         return FALSE;
     }
 
+    public function delete(string $query): LinkedList
+    {
+        if($this->_firstNode) {
+            $previous = NULL;
+            $currentNode = $this->_firstNode;
+            while($currentNode !== NULL) {
+                if($currentNode->data === $query) {
+                    if($currentNode->next === NULL) {
+                        $previous->next = NULL;
+                    }else {
+                        $previous->next = $currentNode->next;
+                    }
+                    $this->_totalNodes--;
+                    break;
+                }
+                $previous = $currentNode;
+                $currentNode = $currentNode->next;
+            }
+        }
+        return $this;
+    }
+
     public function search(string $data)
     {
         if($this->_totalNodes) {
