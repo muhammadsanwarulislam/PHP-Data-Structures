@@ -177,3 +177,34 @@ public function search(string $data)
      return FALSE;
  }
 ```
+### Inserting before a specific node ###
+Inserting a new node before a specific node in a singly linked list, involves the following steps:
+  * Create a new node with the desired data.
+  * Iterate through the list starting at the head, and locate the node that comes immediately before the specific node.
+  * Update the next pointer of the new node to point to the specific node.
+  * Update the next pointer of the node that comes immediately before the specific node to point to the new node.
+ 
+ ![image](https://user-images.githubusercontent.com/29992994/214015826-40389a2a-a9a5-4b59-8619-2e3eba62f634.png)
+
+
+Here is the code:
+```
+public function insertBefore(string $data = NULL, string $query = NULL)
+ {
+     $newNode = new NodeList($data);
+     if($this->__firstNode){
+         $previousNode = NULL;
+         $currentNode  = $this->__firstNode;
+         while($currentNode !== NULL) {
+             if($currentNode->data === $query) {
+                 $newNode->next = $currentNode;
+                 $previousNode->next = $newNode;
+                 $this->__totalNodes++;
+                 break;
+             }
+             $previousNode = $currentNode;
+             $currentNode = $currentNode->next;
+         }
+     }
+ }
+```
