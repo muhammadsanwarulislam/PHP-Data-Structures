@@ -20,12 +20,14 @@ $multiDimensional[]  = ['name' => 'Ronaldo', 'Age' => 37, 'country' => 'Portugal
 $multiDimensional[]  = ['name' => 'Messi', 'Age' => 35, 'country' => 'Argentina'];
 $multiDimensional[]  = ['name' => 'Neymer', 'Age' => 28, 'country' => 'Brazil'];
 
+$num = 1994;
 
 $className = 'PracticeWithArray';
 
 //Using method chaining
-$objOfArrayClass = (new $className($numeric,$multiDimensional, $associativeArrayForInfo))
+$objOfArrayClass = (new $className($numeric,$multiDimensional, $associativeArrayForInfo,$num))
                     ->outputOfTheNumericArray()
                     ->outputOfTheMultiDimensionalArray()
-                    ->outputOfAssociativeArray();
+                    ->outputOfAssociativeArray()
+                    ->intToRoman();
 
