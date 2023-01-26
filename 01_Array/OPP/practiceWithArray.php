@@ -45,7 +45,7 @@ class PracticeWithArray {
     public function intToRoman(): PracticeWithArray
     {
         $result = '';
-        $roman = array(
+        $roman = [
             'M'  => 1000,
             'CM' => 900,
             'D'  => 500,
@@ -59,7 +59,7 @@ class PracticeWithArray {
             'V'  => 5,
             'IV' => 4,
             'I'  => 1,
-        );
+        ];
         foreach($roman as $k => $v){
             while(!($this->num - $v < 0)){
                 $this->num = $this->num - $v;

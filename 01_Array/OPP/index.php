@@ -20,7 +20,7 @@ $multiDimensional[]  = ['name' => 'Ronaldo', 'Age' => 37, 'country' => 'Portugal
 $multiDimensional[]  = ['name' => 'Messi', 'Age' => 35, 'country' => 'Argentina'];
 $multiDimensional[]  = ['name' => 'Neymer', 'Age' => 28, 'country' => 'Brazil'];
 
-$num = 1994;
+$num = 3;
 
 $className = 'PracticeWithArray';
 
