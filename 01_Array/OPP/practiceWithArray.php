@@ -7,7 +7,12 @@ class PracticeWithArray {
     public $num;
     public $combinationOfParenthesis;
 
-    public function __construct($numericArray, $multiDimensionalArray, $associativeArrayForInfo, $num, $combinationOfParenthesis)
+    public function __construct($numericArray, 
+                                $multiDimensionalArray, 
+                                $associativeArrayForInfo, 
+                                $num, 
+                                $combinationOfParenthesis
+                                )
     {
         $this->numericArray             =   $numericArray;
         $this->multiDimensionalArray    =   $multiDimensionalArray;

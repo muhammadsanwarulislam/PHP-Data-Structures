@@ -163,6 +163,12 @@ class LinkedList {
             if($nextNodes->data < $currentNode->data) {
                 $nextNodes->next = $currentNode;
                 $this->_firstNode = $nextNodes;
+            }else {
+                while($currentNode !== NULL && $currentNode->next !== NULL && $currentNode->next->data < $nextNodes->data) {
+                    $currentNode = $currentNode->next;
+                }
+                $nextNodes->next = $currentNode->next;
+                $currentNode->next = $nextNodes;
             }
             $nextNodes=$tempNode;
         }
