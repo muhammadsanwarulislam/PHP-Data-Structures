@@ -216,3 +216,17 @@ The steps of the insertion sort algorithm:
 Insertion sort iterates, consuming one input element each repetition and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list and inserts it there. It repeats until no input elements remain. The following is a graphical example of the insertion sort algorithm. The partially sorted list (black) initially contains only the first element in the list. One element (red) is removed from the input data and inserted in-place into the sorted list with each iteration.
 
 
+### Example 1: ###
+![image](https://user-images.githubusercontent.com/29992994/215148385-b0ef9745-bfbb-4024-8e53-f221be0e3a7e.png)
+
+```
+Input: head = [4,2,1,3]
+Output: [1,2,3,4]
+```
+### Example 2: ###
+![image](https://user-images.githubusercontent.com/29992994/215148645-f67b42fa-09a5-4f6d-9a18-5053ef97367c.png)
+```
+Input: head = [-1,5,3,4,0]
+Output: [-1,0,3,4,5]
+```
+
