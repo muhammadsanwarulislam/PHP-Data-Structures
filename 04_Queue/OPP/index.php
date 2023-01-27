@@ -13,7 +13,7 @@ try {
     $ticket->enqueue('Ticket counter 5');
     // $ticket->enqueue('Ticket counter 6');
     $ticket->show();
-    echo $ticket->peek();
+    // echo $ticket->peek();
 } catch (Exception $e) {
     echo $e->getMessage();
 }
