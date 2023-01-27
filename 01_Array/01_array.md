@@ -119,7 +119,7 @@ Age: 30
 Country: England 
 Team: Man United
 ```
-### Practice Array with leetcode :P ###
+### Practice Array with leetcode ###
 ## Generate Parentheses
 Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 
@@ -132,4 +132,24 @@ Output: ["((()))","(()())","(())()","()(())","()()()"]
 ```
 Input: n = 1
 Output: ["()"]
+```
+
+Here is the code:
+
+```
+public function generateParenthesis(): PracticeWithArray
+    {
+        $arr = [];
+        $this->parenthesisMaker($arr, "", $this->combinationOfParenthesis, $this->combinationOfParenthesis);
+        print_r($arr);
+        return $this;
+    }
+
+    public function parenthesisMaker(&$arr, $current, $open, $close)
+    {
+        if($open == 0 && $close == 0) array_push($arr, $current);
+        if($open > $close) return NULL;
+        if($open > 0) $this->parenthesisMaker($arr, $current.'(', $open-1, $close);
+        if($close > 0) $this->parenthesisMaker($arr, $current.')', $open, $close-1);
+    }
 ```
