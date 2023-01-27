@@ -22,12 +22,15 @@ $multiDimensional[]  = ['name' => 'Neymer', 'Age' => 28, 'country' => 'Brazil'];
 
 $num = 3;
 
+$combinationOfParenthesis = 3;
+
 $className = 'PracticeWithArray';
 
 //Using method chaining
-$objOfArrayClass = (new $className($numeric,$multiDimensional, $associativeArrayForInfo,$num))
+$objOfArrayClass = (new $className($numeric,$multiDimensional, $associativeArrayForInfo,$num, $combinationOfParenthesis))
                     ->outputOfTheNumericArray()
                     ->outputOfTheMultiDimensionalArray()
                     ->outputOfAssociativeArray()
+                    ->generateParenthesis()
                     ->intToRoman();
 

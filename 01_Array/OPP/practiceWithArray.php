@@ -5,13 +5,15 @@ class PracticeWithArray {
     public $multiDimensionalArray   = [];
     public $associativeArrayForInfo = [];
     public $num;
+    public $combinationOfParenthesis;
 
-    public function __construct($numericArray, $multiDimensionalArray, $associativeArrayForInfo, $num)
+    public function __construct($numericArray, $multiDimensionalArray, $associativeArrayForInfo, $num, $combinationOfParenthesis)
     {
         $this->numericArray             =   $numericArray;
         $this->multiDimensionalArray    =   $multiDimensionalArray;
         $this->associativeArrayForInfo  =   $associativeArrayForInfo;
         $this->num                      =   $num;
+        $this->combinationOfParenthesis =   $combinationOfParenthesis;
     }
 
     public function outputOfTheNumericArray(): PracticeWithArray
@@ -40,6 +42,22 @@ class PracticeWithArray {
             echo $index." : ".$info."\n";
         }
         return $this;
+    }
+
+    public function generateParenthesis(): PracticeWithArray
+    {
+        $arr = [];
+        $this->parenthesisMaker($arr, "", $this->combinationOfParenthesis, $this->combinationOfParenthesis);
+        print_r($arr);
+        return $this;
+    }
+
+    public function parenthesisMaker(&$arr, $current, $open, $close)
+    {
+        if($open == 0 && $close == 0) array_push($arr, $current);
+        if($open > $close) return NULL;
+        if($open > 0) $this->parenthesisMaker($arr, $current.'(', $open-1, $close);
+        if($close > 0) $this->parenthesisMaker($arr, $current.')', $open, $close-1);
     }
 
     public function intToRoman(): PracticeWithArray
