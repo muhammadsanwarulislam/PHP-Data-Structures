@@ -18,7 +18,7 @@ $nodeObject = (new LinkedList())
                 // ->reverse()
 
                 // ->insertBefore('Working','PHP OPP')
-                // ->insertionSortList()
+                ->insertionSortList()
                 ->display();
 
 // $obj = new LinkedList();
