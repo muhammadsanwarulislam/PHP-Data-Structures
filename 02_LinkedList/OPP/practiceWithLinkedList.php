@@ -5,7 +5,7 @@ class LinkedList {
     Private $_firstNode = NULL;
     private $_totalNodes     = 0;
 
-    public function inserAtFirst(string $data = NULL): LinkedList 
+    public function inserAtFirst(string|int $data = NULL): LinkedList 
     {
         $newNode    =   new NodeList($data);
 
@@ -20,7 +20,7 @@ class LinkedList {
         return $this;
     }
 
-    public function insertAtLast(string $data = NULL): LinkedList 
+    public function insertAtLast(string|int $data = NULL): LinkedList 
     {
         $newNode = new NodeList($data);
 
@@ -145,6 +145,26 @@ class LinkedList {
                 }
                 $this->_firstNode = $reversedList;
             }
+        }
+        return $this;
+    }
+
+    public function insertionSortList(): LinkedList
+    {
+        $numberOfnodes = $this->_firstNode;
+        $nextNodes = $numberOfnodes->next; //4,1,2,6,3
+        $numberOfnodes->next = NULL;
+        
+        while($nextNodes !== NULL) {
+            $tempNode = $nextNodes->next; // 2,6,3
+            $currentNode = $numberOfnodes; //4
+            // print_r($nextNodes->data); //1
+            // die();
+            if($nextNodes->data < $currentNode->data) {
+                $nextNodes->next = $currentNode;
+                $this->_firstNode = $nextNodes;
+            }
+            $nextNodes=$tempNode;
         }
         return $this;
     }

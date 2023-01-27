@@ -2,9 +2,12 @@
 
 require_once '../OPP/PracticeWithLinkedList.php';
 
-// $nodeObject = (new LinkedList())
-                // ->inserAtFirst('Introduction to PHP7')
-                // ->inserAtFirst('Mastering JavaScript')
+$nodeObject = (new LinkedList())
+                ->inserAtFirst(3)
+                ->inserAtFirst(6)
+                ->inserAtFirst(2)
+                ->inserAtFirst(1)
+                ->inserAtFirst(4)
 
                 // ->insertAtLast('MySQL Workbench tutorial')
                 // ->insertAtLast('Computer Fundamentals')
@@ -15,15 +18,18 @@ require_once '../OPP/PracticeWithLinkedList.php';
                 // ->reverse()
 
                 // ->insertBefore('Working','PHP OPP')
-                // ->display();
+                // ->insertionSortList()
+                ->display();
 
-$obj = new LinkedList();
-$obj->inserAtFirst('working 1');
-$obj->inserAtFirst('working 2');
-$obj->inserAtFirst('working 3');
-// $obj->deleteLast();
-// $obj->deleteFirst();
-// $obj->delete('working 1');
-$obj->search('working 2');
-$obj->display();
-// echo "2nd Item is: ".$obj->getNthNode(1)->data;
+// $obj = new LinkedList();
+// $obj->inserAtFirst(4);
+// $obj->inserAtFirst(5);
+// $obj->inserAtFirst(3);
+// $obj->inserAtFirst(6);
+// // $obj->deleteLast();
+// // $obj->deleteFirst();
+// // $obj->delete('working 1');
+// // $obj->search('working 2');
+// $obj->insertionSortList();
+// $obj->display();
+// // echo "2nd Item is: ".$obj->getNthNode(1)->data;
