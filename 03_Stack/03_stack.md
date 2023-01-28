@@ -22,3 +22,63 @@ Read the 6 and push it onto the stack.
 Read the - operator and pop the two most recent operands (6 and 35), subtract the first from the second, and push the result (29) back onto the stack.
 The final value on the stack is the result of the expression (29).
 This example shows how a stack can be used to keep track of intermediate results and operators in a mathematical expression.
+
+### Let's implement a stack using array ###
+
+First, we will create an interface for the stack with push, pop, isEmpty and top methods. Define an interface like that:
+```
+interface Stack {
+    public function push(string $item);
+
+    public function pop();
+
+    public function top();
+
+    public function isEmpty();
+}
+```
+Defining interface content all the stack functions and whenever we implementing the interface we have to implement all the functions otherwise we will get fatal error.
+Since we are implementing the stack using PHP array, we will use some common PHP functions like push, pop, top.
+
+There will have some following condition which is associated with the stack
+  * we can define the fix size of stack.
+  * If the stack has no item but we will try to pop up the item from stack then it will throw an **underflow exception**.
+  * If the stack is full or define limit exceed but we will we try to push the item in the stack then it will throw **overflow exception**.
+  
+Here is the code for stack implementation using **array**.
+```
+class Books implements Stack {
+    private $limit;
+    private $stack;
+
+    public function __construct(int $limit = 10) {
+        $this->limit = $limit;
+        $this->stack = [];  
+    }
+
+    public function push(string $newItem) {
+        if(count($this->stack) < $this->limit) {
+            array_push($this->stack, $newItem);
+        }else {
+            throw new OverflowException('Stack is full');
+        }
+    }
+
+    public function pop() {
+        if($this->isEmpty()) {
+            throw new UnderflowException('Stack is empty');
+        }else {
+            return array_pop($this->stack);
+        }
+    }
+
+    public function top() : string {
+        return end($this->stack);
+    }
+
+    public function isEmpty() : bool{
+        return empty($this->stack);
+    }
+}
+```
+  
