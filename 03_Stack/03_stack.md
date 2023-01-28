@@ -81,4 +81,16 @@ class Books implements Stack {
     }
 }
 ```
-  
+Define ```Books``` class use to implement the stack functionality, ```__construct``` method use to limit the stack to store the item. The next method push operation:
+```
+public function push(string $newItem) {
+        if(count($this->stack) < $this->limit) {
+            array_push($this->stack, $newItem);
+        }else {
+            throw new OverflowException('Stack is full');
+        }
+    }
+```
+First, we check whether or not the stack is full. It it is not, the item add at the end of the stack using ```array_push``` function. If the stack is full then it will 
+throw an ```OverflowException``` exception.
+
