@@ -94,3 +94,14 @@ public function push(string $newItem) {
 First, we check whether or not the stack is full. It it is not, the item add at the end of the stack using ```array_push``` function. If the stack is full then it will 
 throw an ```OverflowException``` exception.
 
+```
+public function pop() {
+        if($this->isEmpty()) {
+            throw new UnderflowException('Stack is empty');
+        }else {
+            return array_pop($this->stack);
+        }
+    }
+```
+The ```pop``` method will remove the item from stack. To remove the item from stack, first we will check the stack is empty or not using ```isEmpty``` method. If the stack is empty and we will try to remove the item from stack, it will throw an ```UnderflowException``` from SPL. If the stack is not empty, we use the ```array_pop()``` function from PHP to return the last item from the array.
+
