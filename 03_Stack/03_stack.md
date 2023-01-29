@@ -103,6 +103,7 @@ public function pop() {
         }
     }
 ```
+
 The ```pop``` method will remove the item from stack. To remove the item from stack, first we will check the stack is empty or not using ```isEmpty``` method. If the stack is empty and we will try to remove the item from stack, it will throw an ```UnderflowException``` from SPL. If the stack is not empty, we use the ```array_pop()``` function from PHP to return the last item from the array.
 
 To make usefull our stack, let's write down block of code. Here is the code for this:
@@ -119,4 +120,5 @@ try {
 }
 ```
 We have create an instance for our ```Book``` class to store the item in it. We have push three item using push function.
+
 
