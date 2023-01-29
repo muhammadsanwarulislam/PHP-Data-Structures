@@ -213,6 +213,26 @@ public function delete(string $query): LinkedList
     }
 ```
 
+### Getting the Nth position node ###
+To get Nth position node we will iterate the linked list. Here is the code:
+
+```
+public function getNthNode(int $n = 0) 
+    {
+        $count = 1;
+        if($this->_firstNode !== NULL) {
+            $currentNode = $this->_firstNode;
+            while($currentNode !== NULL) {
+                if($count === $n) {
+                    return $currentNode;
+                }
+                $count++;
+                $currentNode = $currentNode->next;
+            }
+        }
+    }
+```
+
 Here is the code:
 ```
 public function insertBefore(string $data = NULL, string $query = NULL)
