@@ -186,6 +186,28 @@ Inserting a new node before a specific node in a singly linked list, involves th
  
  ![image](https://user-images.githubusercontent.com/29992994/214015826-40389a2a-a9a5-4b59-8619-2e3eba62f634.png)
 
+Here is the code:
+```
+public function insertBefore(string $data = NULL, string $query = NULL)
+ {
+     $newNode = new NodeList($data);
+     if($this->__firstNode){
+         $previousNode = NULL;
+         $currentNode  = $this->__firstNode;
+         while($currentNode !== NULL) {
+             if($currentNode->data === $query) {
+                 $newNode->next = $currentNode;
+                 $previousNode->next = $newNode;
+                 $this->__totalNodes++;
+                 break;
+             }
+             $previousNode = $currentNode;
+             $currentNode = $currentNode->next;
+         }
+     }
+ }
+```
+
 ### Searching a node for delete ###
 To delete a specific node using deleting operation, first we will search the node from linked list and then remove the node by removing references. Here is the code:
 
@@ -233,27 +255,6 @@ public function getNthNode(int $n = 0)
     }
 ```
 
-Here is the code:
-```
-public function insertBefore(string $data = NULL, string $query = NULL)
- {
-     $newNode = new NodeList($data);
-     if($this->__firstNode){
-         $previousNode = NULL;
-         $currentNode  = $this->__firstNode;
-         while($currentNode !== NULL) {
-             if($currentNode->data === $query) {
-                 $newNode->next = $currentNode;
-                 $previousNode->next = $newNode;
-                 $this->__totalNodes++;
-                 break;
-             }
-             $previousNode = $currentNode;
-             $currentNode = $currentNode->next;
-         }
-     }
- }
-```
 ### Insertion Sort List ###
 Given the head of a singly linked list, sort the list using insertion sort, and return the sorted list's head.
 
