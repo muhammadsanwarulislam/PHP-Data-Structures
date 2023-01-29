@@ -186,6 +186,32 @@ Inserting a new node before a specific node in a singly linked list, involves th
  
  ![image](https://user-images.githubusercontent.com/29992994/214015826-40389a2a-a9a5-4b59-8619-2e3eba62f634.png)
 
+### Searching a node for delete ###
+To delete a specific node using deleting operation, first we will search the node from linked list and then remove the node by removing references. Here is the code:
+
+```
+public function delete(string $query): LinkedList
+    {
+        if($this->_firstNode) {
+            $previous = NULL;
+            $currentNode = $this->_firstNode;
+            while($currentNode !== NULL) {
+                if($currentNode->data === $query) {
+                    if($currentNode->next === NULL) {
+                        $previous->next = NULL;
+                    }else {
+                        $previous->next = $currentNode->next;
+                    }
+                    $this->_totalNodes--;
+                    break;
+                }
+                $previous = $currentNode;
+                $currentNode = $currentNode->next;
+            }
+        }
+        return $this;
+    }
+```
 
 Here is the code:
 ```

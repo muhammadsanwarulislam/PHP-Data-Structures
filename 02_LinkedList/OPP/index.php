@@ -2,6 +2,7 @@
 
 require_once '../OPP/PracticeWithLinkedList.php';
 
+//Using method chaining
 $nodeObject = (new LinkedList())
                 ->inserAtFirst(3)
                 ->inserAtFirst(6)
