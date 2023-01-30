@@ -255,6 +255,30 @@ public function getNthNode(int $n = 0)
     }
 ```
 
+### Circular Linked List ###
+In circular linked list, the last node's next reference will indicate first node and yeah!! we will get a circular linked list. Let's implement a circular linked list. It's pretty simple as like ```insertAtLast``` function where data will inserted at the end of the list.
+
+```
+public function circularLinkedList(string $data = NULL): LinkedList
+    {
+        $newNode = new NodeList($data);
+        
+        if($this->_firstNode === NULL) {
+            $this->_firstNode = &$newNode;
+        }else {
+            $currentNode = $this->_firstNode;
+            while($currentNode->next !== $this->_firstNode) {
+                $currentNode = $currentNode->next;
+            }
+            $currentNode->next = $newNode;
+        }
+        $newNode->next = $this->_firstNode;
+        $this->_totalNodes++;
+        return $this;
+    }
+```
+If we go throw the preceding code, it only one diffrence the newly created node next reference pointed to the first node ```$newNode->next = $this->_firstNode```. To prevent infinity loop we are comparing ```$currentNode->next``` to ```$this->_firstNode```. The same condition will be apply whenever we try to display all data from circular linked list.
+
 ### Insertion Sort List ###
 Given the head of a singly linked list, sort the list using insertion sort, and return the sorted list's head.
 
