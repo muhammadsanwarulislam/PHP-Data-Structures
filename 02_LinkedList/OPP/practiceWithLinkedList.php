@@ -3,9 +3,9 @@ require_once '../OPP/Node.php';
 
 class LinkedList {
     Private $_firstNode = NULL;
-    private $_totalNodes     = 0;
+    private $_totalNodes= 0;
 
-    public function inserAtFirst(string|int $data = NULL): LinkedList 
+    public function inserAtFirst(string $data = NULL): LinkedList 
     {
         $newNode    =   new NodeList($data);
 
@@ -20,7 +20,7 @@ class LinkedList {
         return $this;
     }
 
-    public function insertAtLast(string|int $data = NULL): LinkedList 
+    public function insertAtLast(string $data = NULL): LinkedList 
     {
         $newNode = new NodeList($data);
 
@@ -57,6 +57,39 @@ class LinkedList {
             }
         }
         return $this;
+    }
+
+    public function circularLinkedList(string $data = NULL): LinkedList
+    {
+        $newNode = new NodeList($data);
+        
+        if($this->_firstNode === NULL) {
+            $this->_firstNode = &$newNode;
+        }else {
+            $currentNode = $this->_firstNode;
+            while($currentNode->next !== $this->_firstNode) {
+                $currentNode = $currentNode->next;
+            }
+            $currentNode->next = $newNode;
+        }
+        $newNode->next = $this->_firstNode;
+        $this->_totalNodes++;
+        return $this;
+    }
+
+    public function displayCircularLinkedListData() 
+    {
+        $currentNode = $this->_firstNode;
+        echo "Total nodes :" .$this->_totalNodes."\n";
+        while($currentNode->next !== $this->_firstNode) {
+            echo  $currentNode->data ."\n";
+            $currentNode    = $currentNode->next;
+        }
+
+        if($currentNode) {
+            echo  $currentNode->data ."\n";
+        }
+
     }
 
     public function deleteFirst()

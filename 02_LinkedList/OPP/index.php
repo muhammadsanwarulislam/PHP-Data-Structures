@@ -4,11 +4,11 @@ require_once '../OPP/PracticeWithLinkedList.php';
 
 //Using method chaining
 $nodeObject = (new LinkedList())
-                ->inserAtFirst(3)
-                ->inserAtFirst(6)
-                ->inserAtFirst(2)
-                ->inserAtFirst(1)
-                ->inserAtFirst(4)
+                // ->inserAtFirst(3)
+                // ->inserAtFirst(6)
+                // ->inserAtFirst(2)
+                // ->inserAtFirst(1)
+                // ->inserAtFirst(4)
 
                 // ->insertAtLast('MySQL Workbench tutorial')
                 // ->insertAtLast('Computer Fundamentals')
@@ -19,8 +19,14 @@ $nodeObject = (new LinkedList())
                 // ->reverse()
 
                 // ->insertBefore('Working','PHP OPP')
-                ->insertionSortList()
-                ->display();
+                // ->insertionSortList()
+                ->circularLinkedList('MySQL Workbench tutorial')
+                ->circularLinkedList('Computer Fundamentals')
+                ->circularLinkedList('PHP OPP')
+                ->circularLinkedList('Database Management')
+                ->circularLinkedList('Algorithm')
+                // ->display()
+                ->displayCircularLinkedListData();
 
 // $obj = new LinkedList();
 // $obj->inserAtFirst(4);
