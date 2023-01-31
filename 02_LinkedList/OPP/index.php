@@ -44,4 +44,5 @@ $nodeObject = (new DoublyLinkedList())
                 ->insertAtFirst(1)
                 ->insertAtFirst(4)
 
+                // ->displayForward();
                 ->displayBackward();

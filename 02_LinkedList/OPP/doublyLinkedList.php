@@ -21,6 +21,16 @@ class DoublyLinkedList {
         return $this;
     }
 
+    public function displayForward()
+    {
+        echo "Total data: ".$this->_totalNode."\n";
+        $currentNode = $this->_firstNode;
+        while($currentNode !== NULL) {
+            echo $currentNode->data."\n";
+            $currentNode = $currentNode->next;
+        }
+    }
+
     public function displayBackward() 
     {
         echo "Total Data : " . $this->_totalNode . "\n";
