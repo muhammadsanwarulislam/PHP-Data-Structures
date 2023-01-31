@@ -303,3 +303,32 @@ Input: head = [-1,5,3,4,0]
 Output: [-1,0,3,4,5]
 ```
 
+**Yeah**,i have done basic operations in ```LinkedList``` linked list class. Now let's run the program with different operations.
+```
+//Using method chaining
+$nodeObject = (new LinkedList())
+                ->inserAtFirst(3)
+                ->inserAtFirst(6)
+                ->inserAtFirst(2)
+                ->inserAtFirst(1)
+                ->inserAtFirst(4)
+
+                ->insertAtLast('MySQL Workbench tutorial')
+                ->insertAtLast('Computer Fundamentals')
+                ->insertAtLast('PHP OPP')
+                ->insertAtLast('Database Management')
+
+                ->delete('PHP OPP')
+                ->reverse()
+
+                ->insertBefore('Working','PHP OPP')
+                ->insertionSortList()
+                ->circularLinkedList('MySQL Workbench tutorial')
+                ->circularLinkedList('Computer Fundamentals')
+                ->circularLinkedList('PHP OPP')
+                ->circularLinkedList('Database Management')
+                ->circularLinkedList('Algorithm')
+                // ->display()
+                ->displayCircularLinkedListData();
+```
+
