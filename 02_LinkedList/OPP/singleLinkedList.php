@@ -1,11 +1,11 @@
 <?php
 require_once '../OPP/Node.php';
 
-class LinkedList {
+class SingleLinkedList {
     Private $_firstNode = NULL;
     private $_totalNodes= 0;
 
-    public function inserAtFirst(string $data = NULL): LinkedList 
+    public function inserAtFirst(string $data = NULL): SingleLinkedList 
     {
         $newNode    =   new NodeList($data);
 
@@ -20,7 +20,7 @@ class LinkedList {
         return $this;
     }
 
-    public function insertAtLast(string $data = NULL): LinkedList 
+    public function insertAtLast(string $data = NULL): SingleLinkedList 
     {
         $newNode = new NodeList($data);
 
@@ -37,7 +37,7 @@ class LinkedList {
         return $this;
     }
 
-    public function insertBefore(string $data = NULL, string $query = NULL): LinkedList
+    public function insertBefore(string $data = NULL, string $query = NULL): SingleLinkedList
     {
         $newNode = new NodeList($data);
         
@@ -59,7 +59,7 @@ class LinkedList {
         return $this;
     }
 
-    public function circularLinkedList(string $data = NULL): LinkedList
+    public function circularLinkedList(string $data = NULL): SingleLinkedList
     {
         $newNode = new NodeList($data);
         
@@ -126,7 +126,7 @@ class LinkedList {
         return FALSE;
     }
 
-    public function delete(string $query): LinkedList
+    public function delete(string $query): SingleLinkedList
     {
         if($this->_firstNode) {
             $previous = NULL;
@@ -162,7 +162,7 @@ class LinkedList {
         return FALSE;
     }
 
-    public function reverse(): LinkedList
+    public function reverse(): SingleLinkedList
     {
         if ($this->_firstNode !== NULL) {
             if ($this->_firstNode->next !== NULL) {
@@ -182,7 +182,7 @@ class LinkedList {
         return $this;
     }
 
-    public function insertionSortList(): LinkedList
+    public function insertionSortList(): SingleLinkedList
     {
         $numberOfnodes = $this->_firstNode;
         $nextNodes = $numberOfnodes->next; //4,1,2,6,3

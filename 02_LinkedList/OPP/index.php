@@ -1,34 +1,28 @@
 <?php
 
-require_once '../OPP/PracticeWithLinkedList.php';
+require_once '../OPP/singleLinkedList.php';
 
 //Using method chaining
-$nodeObject = (new LinkedList())
-                // ->inserAtFirst(3)
-                // ->inserAtFirst(6)
-                // ->inserAtFirst(2)
-                // ->inserAtFirst(1)
-                // ->inserAtFirst(4)
+$nodeObject = (new SingleLinkedList())
+                ->inserAtFirst(3)
+                ->inserAtFirst(6)
+                ->inserAtFirst(2)
+                ->inserAtFirst(1)
+                ->inserAtFirst(4)
 
-                // ->insertAtLast('MySQL Workbench tutorial')
-                // ->insertAtLast('Computer Fundamentals')
-                // ->insertAtLast('PHP OPP')
-                // ->insertAtLast('Database Management')
+                ->insertAtLast('MySQL Workbench tutorial')
+                ->insertAtLast('Computer Fundamentals')
+                ->insertAtLast('PHP OPP')
+                ->insertAtLast('Database Management')
 
-                // ->delete('PHP OPP')
-                // ->reverse()
+                ->delete('PHP OPP')
+                ->reverse()
 
-                // ->insertBefore('Working','PHP OPP')
-                // ->insertionSortList()
-                ->circularLinkedList('MySQL Workbench tutorial')
-                ->circularLinkedList('Computer Fundamentals')
-                ->circularLinkedList('PHP OPP')
-                ->circularLinkedList('Database Management')
-                ->circularLinkedList('Algorithm')
-                // ->display()
-                ->displayCircularLinkedListData();
+                ->insertBefore('Working','PHP OPP')
+                ->insertionSortList()
+                ->display();
 
-// $obj = new LinkedList();
+// $obj = new SingleLinkedList();
 // $obj->inserAtFirst(4);
 // $obj->inserAtFirst(5);
 // $obj->inserAtFirst(3);
