@@ -1,46 +1,71 @@
 <?php
-class Node {
-  public $data;
-  public $children;
+class TreeNode
+{
 
-  public function __construct($data) {
+  public $data = NULL;
+  public $children = [];
+
+  public function __construct(string $data = NULL)
+  {
     $this->data = $data;
-    $this->children = [];
+  }
+
+  public function addChildren(TreeNode $node)
+  {
+    $this->children[] = $node;
   }
 }
 
-class Tree {
-  public $root;
+class Tree
+{
 
-  public function __construct($data) {
-    $this->root = new Node($data);
+  public $root = NULL;
+  public function __construct(TreeNode $node)
+  {
+    $this->root = $node;
   }
 
-  public function addChild($node, $data) {
-    $newNode = new Node($data);
-    array_push($node->children, $newNode);
-    return $newNode;
-  }
+  public function traverse(TreeNode $node, int $level = 0)
+  {
 
-  public function display() {
-    $this->displayNode($this->root);
-  }
+    if ($node) {
+      echo str_repeat("-", $level);
+      echo $node->data . "\n";
 
-  private function displayNode($node) {
-    echo $node->data . "\n";
-    foreach ($node->children as $child) {
-      $this->displayNode($child);
+      foreach ($node->children as $childNode) {
+        $this->traverse($childNode, $level + 1);
+      }
     }
   }
 }
 
-$rootNode = new Node("Root");
-$tree = new Tree($rootNode);
+try {
 
-$childNode1 = $tree->addChild($tree->root, "Child 1");
-$childNode2 = $tree->addChild($tree->root, "Child 2");
+  $ceo = new TreeNode("CEO");
 
-$grandChildNode1 = $tree->addChild($childNode1, "Grandchild 1");
-$grandChildNode2 = $tree->addChild($childNode1, "Grandchild 2");
+  $tree = new Tree($ceo);
 
-$tree->display();
+  $cto    = new TreeNode("CTO");
+  $cfo    = new TreeNode("CFO");
+  $cmo   = new TreeNode("CMO");
+  $coo    = new TreeNode("COO");
+
+  $ceo->addChildren($cto);
+  $ceo->addChildren($cfo);
+  $ceo->addChildren($cmo);
+  $ceo->addChildren($coo);
+
+  $seniorArchitect    = new TreeNode("Senior Architect");
+  $softwareEngineer    = new TreeNode("Software Engineer");
+  $userInterfaceDesigner  = new TreeNode("User Interface Designer");
+  $qualityAssuranceEngineer  = new TreeNode("Quality Assurance Engineer");
+
+  $cto->addChildren($seniorArchitect);
+  $seniorArchitect->addChildren($softwareEngineer);
+  $cto->addChildren($qualityAssuranceEngineer);
+  $cto->addChildren($userInterfaceDesigner);
+
+  $tree->traverse($tree->root);
+} catch (Exception $e) {
+  echo $e->getMessage();
+}
