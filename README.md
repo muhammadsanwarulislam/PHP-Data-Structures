@@ -5,6 +5,7 @@
 | 02    |                      [Linked List](/02_LinkedList/02_linkedlist.md)        |
 | 03    |                      [Stack](/03_Stack/03_stack.md)                        |
 | 04    |                      [Queue](/04_Queue/04_queue.md)                        |
+| 05    |                      [Tree](/05_Tree/05_tree.md)                           |
 
 
 
