@@ -8,3 +8,5 @@ A tree is a data structure that consists of nodes and edges, where each node has
   * **Degree:** The total number of child nodes of a particular parent node is known as its degree.
   * **Path:** The sequence of nodes and edges from a source node to a target node is known as a path between two nodes.
   * **Height of node:** The height of a node is defined by the number of edges between the node and the deepest level of the descendent node.
+  * **Level:** The level represents the generation of nodes. If a parent node is in level n, its child node will be n+1 level.
+  *  **Height of tree:** The height of tree defined by the height of its root node.
