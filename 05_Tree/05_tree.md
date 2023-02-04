@@ -9,6 +9,9 @@ A tree is a data structure that consists of nodes and edges, where each node has
 The data in a tree are not stored in a sequential manner i.e, they are not stored linearly. Instead, they are arranged on multiple levels or we can say it is a hierarchical structure. For this reason, the tree is considered to be a non-linear data structure.
 
 ## Tree properties ##
+  * **Parent node:** The node which is a predecessor of a node is called the parent node of that node. {B} is the parent node of {D, E}.
+  * **Child node:** The node which is the immediate successor of a node is called the child node of that node. Examples: {D, E} are the child nodes of {B}.
+  * **Root node:** The topmost node of a tree or the node which does not have any parent node is called the root node. {A} is the root node of the tree. A non-empty tree must contain exactly one root node and exactly one path from the root to all other nodes of the tree.
   * **Descendent:** This is a node that can be reached from a parent node by repeated processing. {E,I} are the descendants of the node {B}.
   * **Ancestor:** This is a node that can be reached from a child node to a parent node by a repeated way. {A,B} are the ancestor nodes of the node {E}
   * **Degree:** The total number of child nodes of a particular parent node is known as its degree.
