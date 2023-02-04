@@ -2,6 +2,9 @@
 
 A tree is a data structure that consists of nodes and edges, where each node has a parent (except for the root node) and zero or more children. It is a hierarchical structure that can be used to represent hierarchical relationships, such as the structure of a file system, the organization of a company, or the family tree of a person. A tree can be represented in memory as an abstract data type (ADT) with operations to insert, delete, and search for nodes. The tree is a widely used data structure in computer science and can be implemented in various algorithms, including searching (e.g., binary search tree) and sorting (e.g., heap sort).
 
+### Why Tree is considered a non-linear data structure? ###
+The data in a tree are not stored in a sequential manner i.e, they are not stored linearly. Instead, they are arranged on multiple levels or we can say it is a hierarchical structure. For this reason, the tree is considered to be a non-linear data structure.
+
 ## Tree properties ##
   * **Descendent:** This is a node that can be reached from a parent node by repeated processing.
   * **Ancestor:** This is a node that can be reached from a child node to a parent node by a repeated way.
