@@ -11,6 +11,7 @@ The data in a tree are not stored in a sequential manner i.e, they are not store
 ## Tree properties ##
   * **Parent node:** The node which is a predecessor of a node is called the parent node of that node. {B} is the parent node of {D, E}.
   * **Child node:** The node which is the immediate successor of a node is called the child node of that node. Examples: {D, E} are the child nodes of {B}.
+  * **Sibling:** Children of the same parent node are called siblings. {D,E} are called siblings.
   * **Root node:** The topmost node of a tree or the node which does not have any parent node is called the root node. {A} is the root node of the tree. A non-empty tree must contain exactly one root node and exactly one path from the root to all other nodes of the tree.
   * **Descendent:** This is a node that can be reached from a parent node by repeated processing. {E,I} are the descendants of the node {B}.
   * **Ancestor:** This is a node that can be reached from a child node to a parent node by a repeated way. {A,B} are the ancestor nodes of the node {E}
@@ -19,3 +20,4 @@ The data in a tree are not stored in a sequential manner i.e, they are not store
   * **Height of node:** The height of a node is defined by the number of edges between the node and the deepest level of the descendent node.
   * **Level:** The level represents the generation of nodes. If a parent node is in level n, its child node will be n+1 level.
   *  **Height of tree:** The height of tree defined by the height of its root node.
+  *  **Forest:** A forest is a set of zero or more disjoint trees. 
