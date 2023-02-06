@@ -24,12 +24,12 @@ The data in a tree are not stored in a sequential manner i.e, they are not store
 ## Types of tree structures ##
 There are several types of tree structures in computer science, including:
  * **Binary Tree:** where each node has at most two child nodes.
- * AVL Tree: a self-balancing binary search tree.
- * Trie (Prefix Tree): used to store a collection of strings, where each node represents a single character in a string.
- * B-Tree: used in databases and file systems to store large amounts of data more efficiently than a binary tree.
- * K-D Tree: used for nearest neighbor search in high-dimensional spaces.
- * Segment Tree: used for efficiently querying and modifying ranges in an array.
- * Fenwick Tree (Binary Indexed Tree): used for efficiently querying and modifying prefix sums in an array.
- * Heap: a complete binary tree that satisfies the heap property, either min-heap or max-heap.
- * Huffman Tree: used in data compression algorithms to represent a set of characters and their frequencies.
+ * **AVL Tree:** a self-balancing binary search tree.
+ * **Trie (Prefix Tree):** used to store a collection of strings, where each node represents a single character in a string.
+ * **B-Tree:** used in databases and file systems to store large amounts of data more efficiently than a binary tree.
+ * **K-D Tree:** used for nearest neighbor search in high-dimensional spaces.
+ * **Segment Tree:** used for efficiently querying and modifying ranges in an array.
+ * **Fenwick Tree (Binary Indexed Tree):** used for efficiently querying and modifying prefix sums in an array.
+ * **Heap:** a complete binary tree that satisfies the heap property, either min-heap or max-heap.
+ * **Huffman Tree:** used in data compression algorithms to represent a set of characters and their frequencies.
 **These are some of the most commonly used tree structures in computer science.**
