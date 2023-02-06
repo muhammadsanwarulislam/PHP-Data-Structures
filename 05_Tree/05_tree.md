@@ -56,7 +56,7 @@ In this diagram, the root node is 6. The left child of the root is 4 and the rig
 
 In a binary tree, each node has at most two children, and each child is either a left child or a right child. The diagram is a visual representation of the relationships between the nodes in the tree.
 
-### Binary search Tree:###
+### Binary search Tree: ###
 A binary search tree (BST) is a tree data structure in which each node has at most two children, named left and right. The left child node has a value less than its parent node, and the right child node has a value greater than its parent node. This property ensures that the values in the left subtree of a node are less than the node value and the values in the right subtree of a node are greater than the node value. This structure allows for efficient searching, insertion, and deletion of elements in the tree.
 
 Here is an example of a binary search tree diagram:
