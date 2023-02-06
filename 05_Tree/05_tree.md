@@ -24,6 +24,7 @@ The data in a tree are not stored in a sequential manner i.e, they are not store
 ## Types of tree structures ##
 There are several types of tree structures in computer science, including:
  * **Binary Tree:** where each node has at most two child nodes.
+ * **Binary search Tree:** where the nodes are store in a sorted manner. 
  * **AVL Tree:** a self-balancing binary search tree.
  * **Trie (Prefix Tree):** used to store a collection of strings, where each node represents a single character in a string.
  * **B-Tree:** used in databases and file systems to store large amounts of data more efficiently than a binary tree.
