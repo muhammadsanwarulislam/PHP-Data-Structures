@@ -43,11 +43,14 @@ The root node is the topmost node in the tree and is the first node that is trav
 
 Binary trees have several important properties that make them useful for various algorithms. For example, binary trees can be used to efficiently implement search algorithms, such as binary search. In addition, binary trees can be used to store hierarchical data structures, such as file systems and organization charts, where each node represents an item in the hierarchy and its children represent subitems.
 
+```
       6
     /   \
    4     9
   / \   / \
  2   5 7   11
+
+```
 
 In this diagram, the root node is 6. The left child of the root is 4 and the right child is 9. The left child of 4 is 2 and the right child is 5. The left child of 9 is 7 and the right child is 11. The leaves of the tree are 2, 5, 7, and 11, which are the nodes without any children.
 
