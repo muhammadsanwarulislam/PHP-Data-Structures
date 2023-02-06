@@ -44,3 +44,7 @@ To get along with the challenge you need to have the following:
 4. A browser
 5. A code editor
 
+## Credits ##
+
+- [ChatGpt](https://chat.openai.com/chat) - Several exploration
+- [PacktPublishing](https://github.com/PacktPublishing) - Clean codeing
