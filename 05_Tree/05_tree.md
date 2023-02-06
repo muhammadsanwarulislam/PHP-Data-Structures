@@ -33,4 +33,25 @@ There are several types of tree structures in computer science, including:
  * **Fenwick Tree (Binary Indexed Tree):** used for efficiently querying and modifying prefix sums in an array.
  * **Heap:** a complete binary tree that satisfies the heap property, either min-heap or max-heap.
  * **Huffman Tree:** used in data compression algorithms to represent a set of characters and their frequencies.
+
 **These are some of the most commonly used tree structures in computer science.**
+
+**Binary Tree:**
+A binary tree is a tree data structure in which each node has at most two children, referred to as the left child and the right child. Binary trees are widely used in computer science for various purposes, such as searching, sorting, and storing data efficiently.
+
+The root node is the topmost node in the tree and is the first node that is traversed. From the root, we can move down to the left child or the right child, creating a branch in the tree. This process is repeated until we reach a leaf node, which is a node without any children.
+
+Binary trees have several important properties that make them useful for various algorithms. For example, binary trees can be used to efficiently implement search algorithms, such as binary search. In addition, binary trees can be used to store hierarchical data structures, such as file systems and organization charts, where each node represents an item in the hierarchy and its children represent subitems.
+
+      6
+    /   \
+   4     9
+  / \   / \
+ 2   5 7   11
+
+In this diagram, the root node is 6. The left child of the root is 4 and the right child is 9. The left child of 4 is 2 and the right child is 5. The left child of 9 is 7 and the right child is 11. The leaves of the tree are 2, 5, 7, and 11, which are the nodes without any children.
+
+In a binary tree, each node has at most two children, and each child is either a left child or a right child. The diagram is a visual representation of the relationships between the nodes in the tree.
+
+
+
