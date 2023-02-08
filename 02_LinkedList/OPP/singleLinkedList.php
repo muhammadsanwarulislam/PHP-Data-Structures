@@ -59,6 +59,30 @@ class SingleLinkedList {
         return $this;
     }
 
+    public function insertAfter(string $data = NULL, string $query = NULL): SingleLinkedList
+    {
+        $newNode = new NodeList($data);
+
+        if ($this->_firstNode) {
+            $nextNode = NULL;
+            $currentNode = $this->_firstNode;
+            while ($currentNode !== NULL) {
+                if ($currentNode->data === $query) {
+                    if ($nextNode !== NULL) {
+                        $newNode->next = $nextNode;
+                    }
+                    $currentNode->next = $newNode;
+                    $this->_totalNode++;
+                    break;
+                }
+                $currentNode = $currentNode->next;
+                $nextNode = $currentNode->next;
+            }
+        }
+        return $this;
+
+    }
+
     public function circularLinkedList(string $data = NULL): SingleLinkedList
     {
         $newNode = new NodeList($data);
