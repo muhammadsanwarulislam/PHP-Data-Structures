@@ -72,7 +72,7 @@ class SingleLinkedList {
                         $newNode->next = $nextNode;
                     }
                     $currentNode->next = $newNode;
-                    $this->_totalNode++;
+                    $this->_totalNodes++;
                     break;
                 }
                 $currentNode = $currentNode->next;
