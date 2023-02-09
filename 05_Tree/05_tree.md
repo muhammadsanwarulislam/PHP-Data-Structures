@@ -56,6 +56,7 @@ class TreeNode
   }
 }
 ```
+Let's explore the code, the following code have two public properties for ```data``` and ```children```. We have ```addChildren``` method to add a particular node. We will appending the new child node at the end of the array.
 
 **Binary Tree:**
 A binary tree is a tree data structure in which each node has at most two children, referred to as the left child and the right child. Binary trees are widely used in computer science for various purposes, such as searching, sorting, and storing data efficiently.
