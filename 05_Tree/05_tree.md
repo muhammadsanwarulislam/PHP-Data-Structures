@@ -56,7 +56,34 @@ class TreeNode
   }
 }
 ```
-Let's explore the code, the following code have two public properties for ```data``` and ```children```. We have ```addChildren``` method to add a particular node. We will appending the new child node at the end of the array.
+Let's explore the code, the following code have two public properties for ```data``` and ```children```. We have ```addChildren``` method to add a particular node. We will appending the new child node at the end of the array. As a tree is a recursive structure, it will help us build a tree recursively and aslo travers the tree in a recursive manner.
+
+Let's build a tree structure that will define the root node of the tree and also a method to traverse the whole tree. So the basic tree structure look like this:
+
+```
+class Tree
+{
+
+  public $root = NULL;
+  public function __construct(TreeNode $node)
+  {
+    $this->root = $node;
+  }
+
+  public function traverse(TreeNode $node, int $level = 0)
+  {
+
+    if ($node) {
+      echo str_repeat("-", $level);
+      echo $node->data . "\n";
+
+      foreach ($node->children as $childNode) {
+        $this->traverse($childNode, $level + 1);
+      }
+    }
+  }
+}
+```
 
 **Binary Tree:**
 A binary tree is a tree data structure in which each node has at most two children, referred to as the left child and the right child. Binary trees are widely used in computer science for various purposes, such as searching, sorting, and storing data efficiently.
