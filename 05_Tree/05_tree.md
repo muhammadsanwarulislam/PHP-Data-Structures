@@ -84,6 +84,7 @@ class Tree
   }
 }
 ```
+The following code define a simple ```Tree``` class to store the root node reference and also traverse the tree from any node. 
 
 **Binary Tree:**
 A binary tree is a tree data structure in which each node has at most two children, referred to as the left child and the right child. Binary trees are widely used in computer science for various purposes, such as searching, sorting, and storing data efficiently.
