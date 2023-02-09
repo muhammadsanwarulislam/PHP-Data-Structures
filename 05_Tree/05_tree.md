@@ -36,6 +36,27 @@ There are several types of tree structures in computer science, including:
 
 **These are some of the most commonly used tree structures in computer science.**
 
+**Implementing a tree using PHP** 
+Let's develope a tree with real life example, we can consider our organization structure or family tree to represent the data structure. For an organization structure, there is one root node that can be CEO of the company, Followed by CEO-level employees. Here, we are not restricting any degree for a particular node. This mens a node can have multiple children. So let's think of a node structure where we can define the node property.
+```
+class TreeNode
+{
+
+  public $data = NULL;
+  public $children = [];
+
+  public function __construct(string $data = NULL)
+  {
+    $this->data = $data;
+  }
+
+  public function addChildren(TreeNode $node)
+  {
+    $this->children[] = $node;
+  }
+}
+```
+
 **Binary Tree:**
 A binary tree is a tree data structure in which each node has at most two children, referred to as the left child and the right child. Binary trees are widely used in computer science for various purposes, such as searching, sorting, and storing data efficiently.
 
