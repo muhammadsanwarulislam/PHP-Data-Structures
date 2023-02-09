@@ -84,7 +84,37 @@ class Tree
   }
 }
 ```
-The following code define a simple ```Tree``` class to store the root node reference and also traverse the tree from any node. 
+The following code have  a simple ```Tree``` class to store the root node reference and also traverse the tree from any node. In ```traverse``` method we are go throw each node and calling ```traverse``` method recursively to get children node as current node. We are appending dash(-) at the beginning to point out the level of node so that we can easily find out the child level.
+
+So let's create root node and assign it to the tree as root.
+```
+$ceo = new TreeNode("CEO");
+$tree = new Tree($ceo);
+```
+Here, we create the first node as CEO, and then created the tree and assigined the CEO node as the root node of the tree. Now, it is time to go grow our from root to node. We will now add CXO s other employee under the CEO.
+```
+$cto    = new TreeNode("CTO");
+$cfo    = new TreeNode("CFO");
+$cmo   = new TreeNode("CMO");
+$coo    = new TreeNode("COO");
+
+$ceo->addChildren($cto);
+$ceo->addChildren($cfo);
+$ceo->addChildren($cmo);
+$ceo->addChildren($coo);
+
+$seniorArchitect    = new TreeNode("Senior Architect");
+$softwareEngineer    = new TreeNode("Software Engineer");
+$userInterfaceDesigner  = new TreeNode("User Interface Designer");
+$qualityAssuranceEngineer  = new TreeNode("Quality Assurance Engineer");
+
+$cto->addChildren($seniorArchitect);
+$seniorArchitect->addChildren($softwareEngineer);
+$cto->addChildren($qualityAssuranceEngineer);
+$cto->addChildren($userInterfaceDesigner);
+
+$tree->traverse($tree->root);
+```
 
 **Binary Tree:**
 A binary tree is a tree data structure in which each node has at most two children, referred to as the left child and the right child. Binary trees are widely used in computer science for various purposes, such as searching, sorting, and storing data efficiently.
