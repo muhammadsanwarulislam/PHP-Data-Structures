@@ -85,3 +85,15 @@ try {
 
 ```
 Here, the coding pattern almost similar with stack where we use an interface to define some functions. The queue define with fixd-size and checking purpose we are useing ```UnderflowException``` and ```OverflowException```.
+
+## Priority Queue ##
+A priority queue is a data structure that stores elements with associated priorities, and provides access to the element with the highest priority. It is a type of queue that is different from a standard queue in the sense that elements are processed in order of their priority, rather than the order in which they were added.
+
+In a priority queue, elements are inserted using an operation called enqueue, and the highest-priority element is removed using an operation called dequeue. The dequeue operation retrieves and removes the element with the highest priority. The priority of elements can be based on any criteria, such as their value, weight, or any other relevant factor.
+
+There are two common implementations of a priority queue: a binary heap and a Fibonacci heap. A binary heap is a binary tree with the property that the parent node has a higher priority than its children, while a Fibonacci heap is a data structure that can efficiently perform insertions and deletions, as well as finding the element with the highest priority.
+
+Priority queues have a wide range of applications, including scheduling and resource allocation, graph algorithms, and solving search problems, among others.
+
+In summary, a priority queue is a data structure that allows elements to be inserted and retrieved based on their priority, rather than the order in which they were added.
+
