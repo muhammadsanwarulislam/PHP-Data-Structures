@@ -84,3 +84,4 @@ try {
 }
 
 ```
+Here, the coding pattern almost similar with stack where we use an interface to define some functions. The queue define with fixd-size and checking purpose we are useing ```UnderflowException``` and ```OverflowException```.
