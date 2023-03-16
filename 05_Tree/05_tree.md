@@ -153,7 +153,27 @@ N  N  N   N
 In this diagram, the root node is 8, and its left child is 3 and right child is 10. The left subtree of the root node has elements 1 and 6, and the right subtree has elements 14. The leaf nodes (N) do not have any children.
 
 ## Implementating a binary tree ##
-Let's create a binary tree where key factor to a binary tree is we must have two placeholders for the left child node and right child node. 
+Let's create a binary tree where key factor to a binary tree is we must have two placeholders for the left child node and right child node. There is a simple binary node:
+```
+class BinaryNode {
+  public $data;
+  public $right;
+  public $left;
+  public function __construct(string $data = NULL)
+  {
+    $this->data = $data;
+    $this->right = NULL;
+    $this->left = NULL;   
+  }
+
+  public function addChildren(BinaryNode $left, BinaryNode $right)
+  {
+    $this->right = $left;
+    $this->right = $right;  
+  }
+}
+```
+The following code shows that we have a class ```BinarryNode``` with tree properties to store data, left and right. When we are constructing a new node, we are adding the node value to the data property, left and right kept ```NULL``` as we are not sure if we need those or not. We have ```addChildren``` method to add left children and right children to a particular node. 
 
 
 
