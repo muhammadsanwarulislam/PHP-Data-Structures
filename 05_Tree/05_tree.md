@@ -152,5 +152,8 @@ N  N  N   N
 ```
 In this diagram, the root node is 8, and its left child is 3 and right child is 10. The left subtree of the root node has elements 1 and 6, and the right subtree has elements 14. The leaf nodes (N) do not have any children.
 
+## Implementating a binary tree ##
+Let's create a binary tree where key factor to a binary tree is we must have two placeholders for the left child node and right child node. 
+
 
 
