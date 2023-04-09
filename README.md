@@ -6,6 +6,7 @@
 | 03    |                      [Stack](/03_Stack/03_stack.md)                        |
 | 04    |                      [Queue](/04_Queue/04_queue.md)                        |
 | 05    |                      [Tree](/05_Tree/05_tree.md)                           |
+| 06    |                      [Sorting](/06_Sorting/06_sorting.md)                  |
 
 
 
@@ -17,10 +18,10 @@
 There are two different groups of data structures
   * Linear data structures
   * Nollinear data structures
-  
+
 In linear data structures, items are structured in a linear or sequential manner. Array, list, stack, and queue are examples of linear structures. In nonlinear structures, data are not structured in a sequential way. Graph and tree are the most common examples of nonlinear data structures.
 
-There are many different types of data structures as like 
+There are many different types of data structures as like
   * Stuck
   * Array
   * Linked list
