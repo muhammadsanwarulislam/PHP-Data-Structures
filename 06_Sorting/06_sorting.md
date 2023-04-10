@@ -9,4 +9,6 @@ Sorting means a sorted order of data set. Basically, we can sorted the data with
   A good sorting algorithm is define which is use minimum number of comparisons and swapping according to the unsorted data set.
 
   ## Bubble sort ##
+Bubble sort is most commonly used sorting algorithm. It is comparsion-based sorting algorithm, which is always referred inefficient sorting algorithm. In bubble sort it requires maximum number of comparison.
+In bubble sort, each item of the list have to compared with rest of the items and swapped if required. We can sort either ascending or descending order. 
   
